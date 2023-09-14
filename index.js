@@ -5,45 +5,51 @@ function getComputerChoice(...arr) {
     return arr[Math.floor(Math.random() * arr.length)]
 }
 
-//Now we are going to create our strings 
-//These strings will be randomized once used by the function
-let rock = "rock";
-let paper = "paper";
-let scissors = "scissors";
-
-//Now we're calling our function
-//We first declare a variable
-//We then give the variable a value of the function
-//Within the function we give the parameters, rock, paper, scissors
-const game = getComputerChoice(rock, paper, scissors);
-console.log(game);
-
 //Create a function that plays a single round of rock paper scissors. 
 //The function should take two parameters. 
 //param playerSelection, param computerSelection
-function playGame(playerSelection, computerSelection) {
-    if (playerSelection == computerSelection){
-        console.log("tie")
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === computerSelection){
+        return "tie";
     }
-    else if(playerSelection == 'rock'){
-        if(computerSelection == 'paper'){
-            console.log('computer won')
+    else if (playerSelection === 'rock'){
+        if(computerSelection === 'paper'){
+            return "You lost! Paper beats rock"
         }else{
-            console.log('player won')
+            return "You won! Rock beats scissors"
         }
     }
-    else if(playerSelection == 'scissors'){
-        if(computerSelection == 'rock'){
-            console.log('computer won')
+    else if(playerSelection === 'scissors'){
+        if(computerSelection === 'rock'){
+            return "You lost! Rock beats scissors"
         }else{
-            console.log('player won')
+            return "You won! Scissors beats paper"
         }
     }
-    else if(player == 'paper'){
-        if(computer == 'scissors'){
-            console.log('computer won')
+    else if(playerSelection === 'paper'){
+        if(computerSelection === 'scissors'){
+            return "You lost! Scissors beat paper"
         }else{
-            console.log('player won')
+            return "You won! Paper beats rock"
         }
     }
 }
+
+//declaring the variable playerSelection with a prompting value
+//asking the user to pick between rock, paper and scissors
+const playerSelection = prompt("Choose rock, paper or scissors:..");
+const computerSelection = getComputerChoice('rock', 'paper', 'scissors');
+const result = playRound(playerSelection, computerSelection);
+console.log(result);
+
+//Write a new function called game(). Use the previous function inside of this one
+//We have to use an anonymous function. 
+//The goal of this function is to play a 5 round game 
+//The game will keep score and report a winner or loser at the end
+
+
+
+
+
+
+
