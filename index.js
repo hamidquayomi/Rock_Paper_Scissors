@@ -37,15 +37,26 @@ function playRound(playerSelection, computerSelection) {
 
 //declaring the variable playerSelection with a prompting value
 //asking the user to pick between rock, paper and scissors
-const playerSelection = prompt("Choose rock, paper or scissors:..");
-const computerSelection = getComputerChoice('rock', 'paper', 'scissors');
-const result = playRound(playerSelection, computerSelection);
-console.log(result);
+//let playerSelection = ('rock');
+//let computerSelection = getComputerChoice('rock', 'paper', 'scissors');
+//let result = playRound(playerSelection, computerSelection);
+//console.log(result)
+function game(){
+    for (let i = 0; i <= 4; i++) {
+        let playerSelection = ('rock');
+        let computerSelection = getComputerChoice('rock', 'paper', 'scissors');
+        let result = playRound(playerSelection, computerSelection);
+        console.log(result)
+    }
+}
 
-//Write a new function called game(). Use the previous function inside of this one
-//We have to use an anonymous function. 
-//The goal of this function is to play a 5 round game 
-//The game will keep score and report a winner or loser at the end
+console.log(game())
+
+
+
+
+
+
 
 
 
