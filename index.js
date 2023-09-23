@@ -41,18 +41,49 @@ function playRound(playerSelection, computerSelection) {
 //let computerSelection = getComputerChoice('rock', 'paper', 'scissors');
 //let result = playRound(playerSelection, computerSelection);
 //console.log(result)
+//creating a new function called game
+//function plays the game 5 times with a while loop
+let tieCount = 0;
+let playerCount = 0;
+let computerCount = 0;
 function game(){
     for (let i = 0; i <= 4; i++) {
         let playerSelection = ('rock');
         let computerSelection = getComputerChoice('rock', 'paper', 'scissors');
         let result = playRound(playerSelection, computerSelection);
         console.log(result)
+        if (result === 'tie'){
+            tieCount++;
+        }
+        else if (result === 'You lost! Paper beats rock'){
+            computerCount++;
+        }
+        else if (result === 'You won! Rock beats scissors'){
+            playerCount++;
+        }
+        else if (result === 'You lost! Rock beats scissors'){
+            computerCount++;
+        }
+        else if (result === 'You won! Scissors beats paper'){
+            playerCount++;
+        }
+        else if (result === 'You lost! Scissors beat paper'){
+            computerCount++;
+        }
+        else if (result === 'You won! Paper beats rock'){
+            playerCount++;
+        }
     }
 }
 
 console.log(game())
-
-
+console.log('Tie count = '+ tieCount)
+console.log('Player count = '+ playerCount)
+console.log('Computer count = '+ computerCount)
+//create a scoreboard
+//keep track of player and computer score
+//create 2 variables that will track score
+//scoreboard starts 0 adds a 1 every time someone wins
 
 
 
