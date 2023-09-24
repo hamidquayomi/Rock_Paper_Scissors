@@ -48,7 +48,7 @@ let playerCount = 0;
 let computerCount = 0;
 function game(){
     for (let i = 0; i <= 4; i++) {
-        let playerSelection = ('rock');
+        let playerSelection = prompt("Choose rock, paper, scissors...");
         let computerSelection = getComputerChoice('rock', 'paper', 'scissors');
         let result = playRound(playerSelection, computerSelection);
         console.log(result)
