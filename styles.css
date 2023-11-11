@@ -1,0 +1,41 @@
+body{
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(72, 147, 45));
+  }
+
+#pop{
+    display: flex;
+    justify-content: center;
+}
+
+#Rock {
+    background-color: rgb(206, 129, 129);
+    width: 120px;
+    height: 100px;
+}
+#Paper {
+    background-color: rgb(145, 211, 145);
+    width: 120px;
+    height: 100px;
+}
+#Scissors {
+    background-color: rgb(165, 165, 250);
+    width: 120px;
+    height: 100px;
+}
+
+#cooldiv{
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(51, 153, 100);
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+
